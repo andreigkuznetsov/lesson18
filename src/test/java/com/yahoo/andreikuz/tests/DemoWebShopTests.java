@@ -22,7 +22,6 @@ public class DemoWebShopTests {
 
     public static AppConfig webConfig = ConfigFactory.create(AppConfig.class, System.getProperties());
     public static String authorizationCookie;
-    public static String updateNameAndLastName;
 
     Faker faker = new Faker(new Locale("en"));
 
@@ -80,7 +79,7 @@ public class DemoWebShopTests {
 
 
         step("Изменить Имя и Фамилию пользователя", () -> {
-                updateNameAndLastName =
+
                         given()
                                 .cookie(cookieRequest)
                                 .contentType("application/x-www-form-urlencoded")
