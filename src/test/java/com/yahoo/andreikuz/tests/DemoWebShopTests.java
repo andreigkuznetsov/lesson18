@@ -98,7 +98,7 @@ public class DemoWebShopTests {
                                 .cookie("NOPCOMMERCE.AUTH");
             });
 
-            step("Открыть страницу сданными пользователя", () ->
+            step("Открыть страницу с данными пользователя", () ->
                     open("customer/info"));
 
             step("Проверить, что Имя соответствует", () ->
