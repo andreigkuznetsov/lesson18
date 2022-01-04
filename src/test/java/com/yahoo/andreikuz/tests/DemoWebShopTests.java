@@ -30,23 +30,23 @@ public class DemoWebShopTests {
     String lastName = faker.name().lastName();
 
     String cookieRequest =
-            "__utmz=78382081.1640687860.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none);" +
-                    "__gads=ID=4d2f996db865aca3:T=1640688024:S=ALNI_MZ6GyuXnVrXi2Lud_Vgnea0cx8M5Q;" +
-                    "NopCommerce.RecentlyViewedProducts=RecentlyViewedProductIds=16&Recent;" +
-                    "lyViewedProductIds=75&RecentlyViewedProductIds=44;" +
-                    "__atuvc=1%7C52%2C6%7C0;" +
-                    "ARRAffinity=55622bac41413dfac968dd8f036553a9415557909fd0cd3244e7e0e656e4adc8;" +
-                    "__utma=78382081.185860671.1640687860.1641119519.1641135593.11; " +
-                    "__utmc=78382081; " +
-                    "__utmt=1;" +
+            //"__utmz=78382081.1640687860.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none);" +
+                    //"__gads=ID=4d2f996db865aca3:T=1640688024:S=ALNI_MZ6GyuXnVrXi2Lud_Vgnea0cx8M5Q;" +
+                    //"NopCommerce.RecentlyViewedProducts=RecentlyViewedProductIds=16&Recent;" +
+                    //"lyViewedProductIds=75&RecentlyViewedProductIds=44;" +
+                    //"__atuvc=1%7C52%2C6%7C0;" +
+                    //"ARRAffinity=55622bac41413dfac968dd8f036553a9415557909fd0cd3244e7e0e656e4adc8;" +
+                    //"__utma=78382081.185860671.1640687860.1641119519.1641135593.11; " +
+                    //"__utmc=78382081; " +
+                    //"__utmt=1;" +
                     "__RequestVerificationToken=lGX50K9LCDhFQxnJ1Av1wWxaEo-y4EVte8NGA6vX0b19Gx1ERN" +
                     "Ff3xCVaOci7KEEICshWfTCjR510EcKzLqExMjP9f7bXuguu24GjtVQ1TI1;" +
-                    "__utmb=78382081.2.10.1641135593;" +
+                    //"__utmb=78382081.2.10.1641135593;" +
                     "NOPCOMMERCE.AUTH=12ECF253B5CADCBF5C313190CD060D3E89750693D1D358B92CF8B08DC862F" +
                     "7AD7E912B219D9EEBD2756C46C804EB8B0AB5E40E09A2DC5AB0140CF7149C36DA5EBAD28B58F186307E3558191" +
                     "9116EF6D50D95C6C6C07F4B2089D61D9E8B8EB6C599E6B243B4DE832556477C63138BADA0BB5F9D799E5F42CE9" +
-                    "997B675328124C8FD5D2B6A0096E29D8EB059A6C4935865A57CA140B77E889E18732F83F957C459;" +
-                    "Nop.customer=2c81a2cb-39fe-452f-8d2b-609f733dd048";
+                    "997B675328124C8FD5D2B6A0096E29D8EB059A6C4935865A57CA140B77E889E18732F83F957C459;";
+                    //"Nop.customer=2c81a2cb-39fe-452f-8d2b-609f733dd048"
 
     String RequestVerificationToken = "gfwDqchwDW-6s4SRjLA8JxHe9etCVoq1I4LXMJx4pJO0aT8fgyrtVxLMKqkiL" +
             "3l116DePf_8k61rcFLJsZiSJHtwaC9iFYy2RigtfHk4LqiFtseZ9Wq6TCPPpua2DhLA0";
@@ -69,8 +69,6 @@ public class DemoWebShopTests {
                             .statusCode(302)
                             .extract()
                             .cookie("NOPCOMMERCE.AUTH");
-
-
         });
 
         step("Открыть минимальный контент, потому что cookie можно установить при открытии сайта", () ->
